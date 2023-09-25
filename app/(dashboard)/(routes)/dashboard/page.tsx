@@ -1,9 +1,10 @@
-import React from 'react'
+import { Button } from "@/components/ui/button";
 
-const DashboardPage = () => {
+export default function DashboardPage() {
   return (
-    <div>DashboardPage</div>
+    <>
+    <p className="text-2xl text-slate-500 font-bold">Dashboard Page (Protected)</p>
+    <Button className="mt-1" variant={"default"} >Hello Abhaya</Button>
+    </>
   )
 }
-
-export default DashboardPage
