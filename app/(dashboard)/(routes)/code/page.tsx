@@ -17,6 +17,7 @@ import { Empty } from "@/components/Empty";
 import { Loader } from "@/components/Loader";
 import { cn } from "@/lib/utils";
 import { BotAvatar, UserAvatar } from "@/components/Avatars";
+import ReactMarkdown from "react-markdown";
 
 const CodePage = () => {
   const router = useRouter();
@@ -34,7 +35,7 @@ const CodePage = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      const userMessage = {
+      const userMessage: ChatCompletionRequestMessage = {
         role: "user",
         content: values.prompt,
       };
@@ -84,7 +85,7 @@ const CodePage = () => {
                       <Input
                         className="border-0 outline-none  focus-visible:ring-transparent form-visible:ring-0"
                         disabled={isLoading}
-                        placeholder="Simple Toggle Button using React Hooks"
+                        placeholder="Simple Toggle Button using React Hooks."
                         {...field}
                       />
                     </FormControl>
@@ -121,7 +122,24 @@ const CodePage = () => {
                 )}
               >
                 {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
-                <p className="text-sm">{message.content}</p>
+                <ReactMarkdown
+                  components={{
+                    pre: ({ node, ...props }) => (
+                      <div className="overflow-auto w-full my-2 bg-black/10 p-2 rounded-lg">
+                        <pre {...props} />
+                      </div>
+                    ),
+                    code: ({ node, ...props }) => (
+                      <code
+                        className="bg-black/10 rounded-lg p-1 "
+                        {...props}
+                      />
+                    ),
+                  }}
+                  className="text-sm overflow-hidden leading-7"
+                >
+                  {message.content || ""}
+                </ReactMarkdown>
               </div>
             ))}
           </div>

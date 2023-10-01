@@ -1,19 +1,20 @@
-import { ClerkProvider } from '@clerk/nextjs'
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { ClerkProvider } from "@clerk/nextjs";
+import "./globals.css";
+import "./code.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Genius',
-  description: 'AI Saas Platform',
-}
+  title: "Genius",
+  description: "AI Saas Platform",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <ClerkProvider>
@@ -21,5 +22,5 @@ export default function RootLayout({
         <body className={inter.className}>{children}</body>
       </html>
     </ClerkProvider>
-  )
+  );
 }
