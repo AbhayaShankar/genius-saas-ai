@@ -5,7 +5,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import * as z from "zod";
 import Heading from "@/components/Heading";
-import { MessageSquare } from "lucide-react";
+import { Code } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { formSchema } from "./constants";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -18,7 +18,7 @@ import { Loader } from "@/components/Loader";
 import { cn } from "@/lib/utils";
 import { BotAvatar, UserAvatar } from "@/components/Avatars";
 
-const ConversationPage = () => {
+const CodePage = () => {
   const router = useRouter();
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
 
@@ -41,7 +41,7 @@ const ConversationPage = () => {
 
       const newMessages = [...messages, userMessage];
 
-      const response = await axios.post("/api/conversation", {
+      const response = await axios.post("/api/code", {
         messages: newMessages,
       });
 
@@ -62,11 +62,11 @@ const ConversationPage = () => {
   return (
     <div>
       <Heading
-        title="Conversation"
-        description="Experience and Leverage smart conversation with AI."
-        icon={MessageSquare}
-        iconColor="text-violet-500"
-        bgColor="bg-violet-500/10"
+        title="Code Generation"
+        description="Generate code using descriptive text."
+        icon={Code}
+        iconColor="text-green-700"
+        bgColor="bg-green-700/10"
       />
       <div className="px-4 lg:px-8">
         <div>
@@ -84,7 +84,7 @@ const ConversationPage = () => {
                       <Input
                         className="border-0 outline-none  focus-visible:ring-transparent form-visible:ring-0"
                         disabled={isLoading}
-                        placeholder="How to become a good frontend developer ?"
+                        placeholder="Simple Toggle Button using React Hooks"
                         {...field}
                       />
                     </FormControl>
@@ -131,4 +131,4 @@ const ConversationPage = () => {
   );
 };
 
-export default ConversationPage;
+export default CodePage;
