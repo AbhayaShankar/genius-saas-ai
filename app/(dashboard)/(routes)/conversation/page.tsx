@@ -54,6 +54,7 @@ const ConversationPage = () => {
       console.log(error);
     } finally {
       //TODO: Why refresh will come back to this
+      // When we request/hit any api, the data comes and get rendered. And our apiLimit counter whihc we have created is also updated. But the catch is the counter is not rendered yet on the client side. It is updated on the server. So inorder to get the server data back, we do router.refresh(), And this will update all the server components with the latest data.
       router.refresh();
     }
     console.log(values);
