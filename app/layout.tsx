@@ -3,6 +3,7 @@ import "./globals.css";
 import "./code.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="/logo.png" />
+      </Head>
       <html lang="en">
         <body className={inter.className}>{children}</body>
       </html>
