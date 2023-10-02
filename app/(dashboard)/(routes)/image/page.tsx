@@ -49,7 +49,6 @@ const ImagePage = () => {
       const urls = response.data.map((image: { url: string }) => image.url);
 
       setImages(urls);
-      console.log(values);
       form.reset();
     } catch (error) {
       // TODO: Open pro model
@@ -58,7 +57,6 @@ const ImagePage = () => {
       //TODO: Why refresh will come back to this
       router.refresh();
     }
-    console.log(values);
   };
 
   return (
