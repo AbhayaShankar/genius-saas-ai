@@ -31,7 +31,7 @@ export async function POST(
 
 
         const response = await replicate.run(
-            "arielreplicate/stable_diffusion_infinite_zoom:a2527c5074fc0cf9fa6015a40d75d080d1ddf7082fabe142f1ccd882c18fce61",
+            "anotherjesse/zeroscope-v2-xl:9f747673945c62801b13b84701c783929c0ee784e4748ec062204894dda1a351",
             {
                 input: {
                     prompt: prompt
