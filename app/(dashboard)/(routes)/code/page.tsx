@@ -18,8 +18,10 @@ import { Loader } from "@/components/Loader";
 import { cn } from "@/lib/utils";
 import { BotAvatar, UserAvatar } from "@/components/Avatars";
 import ReactMarkdown from "react-markdown";
+import { useProModal } from "@/hooks/use-pro-modal";
 
 const CodePage = () => {
+  const proModal = useProModal();
   const router = useRouter();
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
 
@@ -50,8 +52,11 @@ const CodePage = () => {
       console.log(messages);
 
       form.reset();
-    } catch (error) {
+    } catch (error: any) {
       // TODO: Open pro model
+      if (error?.repsonse?.status === 403) {
+        proModal.onOpen();
+      }
       console.log(error);
     } finally {
       //TODO: Why refresh will come back to this

@@ -1,13 +1,12 @@
-import { Menu } from "lucide-react";
-import React from "react";
-import { Button } from "./ui/button";
 import { UserButton } from "@clerk/nextjs";
 import MobileSidebar from "./Mobile-Sidebar";
+import { getApiLimitCount } from "@/lib/api-limit";
 
-const Navbar = () => {
+const Navbar = async () => {
+  const apiLimitCount: number = await getApiLimitCount();
   return (
     <div className="flex items-center p-4">
-      <MobileSidebar />
+      <MobileSidebar apiLimitCount={apiLimitCount} />
       <div className="w-full flex justify-end ">
         <UserButton afterSignOutUrl="/" />
       </div>

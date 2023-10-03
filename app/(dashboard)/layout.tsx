@@ -4,7 +4,7 @@ import { getApiLimitCount } from "@/lib/api-limit";
 import React from "react";
 
 const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
-  const apiLimitCount = await getApiLimitCount();
+  const apiLimitCount: number = await getApiLimitCount();
   return (
     <div className="h-full relative">
       <div className="hidden md:flex h-full md:flex-col md:fixed md:inset-y-0 bg-gray-900 md:w-72">
