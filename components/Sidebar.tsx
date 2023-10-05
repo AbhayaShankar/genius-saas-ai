@@ -6,15 +6,69 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FreeCounter } from "./FreeCounter";
-import { routes } from "@/constants";
+
+import {
+  Code,
+  ImageIcon,
+  LayoutDashboard,
+  MessageSquare,
+  Music,
+  Settings,
+  VideoIcon,
+} from "lucide-react";
 
 const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
 
 interface SidebarProps {
   apiLimitCount: number;
+  isPro: boolean;
 }
 
-const Sidebar = ({ apiLimitCount = 0 }: SidebarProps) => {
+const routes = [
+  {
+    label: "Dashboard",
+    icon: LayoutDashboard,
+    href: "/dashboard",
+    text_color: "text-sky-500",
+  },
+  {
+    label: "Conversation",
+    icon: MessageSquare,
+    href: "/conversation",
+    text_color: "text-violet-500",
+  },
+  {
+    label: "Image Generation",
+    icon: ImageIcon,
+    href: "/image",
+    text_color: "text-pink-500",
+  },
+  {
+    label: "Video Generation",
+    icon: VideoIcon,
+    href: "/video",
+    text_color: "text-orange-700",
+  },
+  {
+    label: "Music Generation",
+    icon: Music,
+    href: "/music",
+    text_color: "text-emerald-500",
+  },
+  {
+    label: "Code Generation",
+    icon: Code,
+    href: "/code",
+    text_color: "text-green-700",
+  },
+  {
+    label: "Settings",
+    icon: Settings,
+    href: "/settings",
+  },
+];
+
+const Sidebar = ({ apiLimitCount = 0, isPro = false }: SidebarProps) => {
   const pathname = usePathname();
 
   return (
@@ -48,7 +102,7 @@ const Sidebar = ({ apiLimitCount = 0 }: SidebarProps) => {
           ))}
         </div>
       </div>
-      <FreeCounter apiLimitCount={apiLimitCount} />
+      <FreeCounter isPro={isPro} apiLimitCount={apiLimitCount} />
     </div>
   );
 };
