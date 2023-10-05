@@ -25,6 +25,7 @@ import {
 import { Card, CardFooter } from "@/components/ui/card";
 import Image from "next/image";
 import { useProModal } from "@/hooks/use-pro-modal";
+import toast from "react-hot-toast";
 
 const ImagePage = () => {
   const proModal = useProModal();
@@ -56,6 +57,15 @@ const ImagePage = () => {
       // TODO: Open pro model
       if (error?.repsonse?.status === 403) {
         proModal.onOpen();
+      } else {
+        toast("Something Went Wrong!", {
+          icon: "❌",
+          style: {
+            borderRadius: "8px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
       }
       // TODO: Open pro model
       console.log(error);

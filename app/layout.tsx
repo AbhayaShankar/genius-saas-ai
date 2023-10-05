@@ -5,6 +5,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import { ModalProvider } from "@/components/ModalProvider";
+import ToasterProvider from "@/components/ToasterProvider";
+import CrispChat from "@/components/CrispChat";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +27,9 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/logo.png" />
       </Head>
       <html lang="en">
+        <CrispChat />
         <body className={inter.className}>
+          <ToasterProvider />
           <ModalProvider />
           {children}
         </body>

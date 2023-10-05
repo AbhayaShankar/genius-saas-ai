@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Empty } from "@/components/Empty";
 import { Loader } from "@/components/Loader";
 import { useProModal } from "@/hooks/use-pro-modal";
+import toast from "react-hot-toast";
 
 const VideoPage = () => {
   const proModal = useProModal();
@@ -44,6 +45,15 @@ const VideoPage = () => {
       // TODO: Open pro model
       if (error?.repsonse?.status === 403) {
         proModal.onOpen();
+      } else {
+        toast("Something Went Wrong!", {
+          icon: "❌",
+          style: {
+            borderRadius: "8px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
       }
       // TODO: Open pro model
       console.log(error);

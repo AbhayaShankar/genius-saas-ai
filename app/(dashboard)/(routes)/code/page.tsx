@@ -19,6 +19,7 @@ import { cn } from "@/lib/utils";
 import { BotAvatar, UserAvatar } from "@/components/Avatars";
 import ReactMarkdown from "react-markdown";
 import { useProModal } from "@/hooks/use-pro-modal";
+import toast from "react-hot-toast";
 
 const CodePage = () => {
   const proModal = useProModal();
@@ -56,6 +57,15 @@ const CodePage = () => {
       // TODO: Open pro model
       if (error?.repsonse?.status === 403) {
         proModal.onOpen();
+      } else {
+        toast("Something Went Wrong!", {
+          icon: "❌",
+          style: {
+            borderRadius: "8px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
       }
       console.log(error);
     } finally {

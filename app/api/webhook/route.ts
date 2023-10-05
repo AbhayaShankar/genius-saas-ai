@@ -4,6 +4,7 @@ import { NextResponse } from "next/server";
 
 import prismadb from "@/lib/prismadb";
 import { stripe } from "@/lib/stripe";
+import toast from "react-hot-toast";
 
 export async function POST(req: Request) {
     const body = await req.text();
@@ -18,6 +19,14 @@ export async function POST(req: Request) {
             process.env.STRIPE_WEBHOOK_SECRET || ""
         )
     } catch (error: any) {
+        toast("STRIPE WEBHOOK ERROR!", {
+            icon: "❌",
+            style: {
+                borderRadius: "8px",
+                background: "#333",
+                color: "#fff",
+            },
+        });
         return new NextResponse(`Webhook_Error : ${error.message}`, { status: 400 })
     }
 

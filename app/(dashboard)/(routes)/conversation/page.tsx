@@ -18,6 +18,7 @@ import { Loader } from "@/components/Loader";
 import { cn } from "@/lib/utils";
 import { BotAvatar, UserAvatar } from "@/components/Avatars";
 import { useProModal } from "@/hooks/use-pro-modal";
+import toast from "react-hot-toast";
 
 const ConversationPage = () => {
   const proModal = useProModal();
@@ -55,6 +56,15 @@ const ConversationPage = () => {
       // TODO: Open pro model
       if (error?.response?.status === 403) {
         proModal.onOpen();
+      } else {
+        toast("Something Went Wrong!", {
+          icon: "❌",
+          style: {
+            borderRadius: "8px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
       }
       console.log(error);
     } finally {
