@@ -1,4 +1,4 @@
-import { auth } from "@clerk/nextjs";
+import { auth, currentUser } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 import { Configuration, OpenAIApi } from "openai";
 import { checkApiLimit, increaseApiLimit } from "@/lib/api-limit";
@@ -18,6 +18,9 @@ export async function POST(
         const { userId } = auth();
         const body = await req.json();
         const { messages } = body
+        const user = await currentUser()
+        // console.log(user);
+
 
         if (!userId) {
             return new NextResponse("unauthorized", { status: 401 })
