@@ -1,23 +1,11 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { Fragment } from "react";
+import LandingHero from "@/components/LandingHero";
+import LandingNavbar from "@/components/LandingNavbar";
 
 export default function LandingPage() {
   return (
-    <Fragment>
-        <p className="text-2xl text-slate-500 font-bold">Landing Page (Unprotected)</p>
-        <div>
-            <Link href={"/sign-in"}> 
-                <Button>
-                    Login
-                </Button>
-            </Link>
-            <Link href={"/sign-up"}> 
-                <Button>
-                    Register
-                </Button>
-            </Link>
-        </div>
-    </Fragment>
-  )
+    <div className="h-full">
+      <LandingNavbar />
+      <LandingHero />
+    </div>
+  );
 }
