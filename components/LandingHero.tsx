@@ -43,7 +43,7 @@ const LandingHero = () => {
       </div>
       <div className="text-sm md:text-md font-semibold text-zinc-500 tracking-wide">
         No Credit Card Required. Test for{" "}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r  from-purple-600 to-pink-600">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r  from-purple-600 to-pink-600 uppercase">
           {" "}
           Free
         </span>

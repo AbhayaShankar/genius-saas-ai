@@ -12,6 +12,7 @@ import {
   ImageIcon,
   LayoutDashboard,
   MessageSquare,
+  MoveLeft,
   Music,
   Settings,
   VideoIcon,
@@ -73,6 +74,13 @@ const Sidebar = ({ apiLimitCount = 0, isPro = false }: SidebarProps) => {
 
   return (
     <div className="h-full flex flex-col py-4 space-y-4 bg-[#111827] text-white">
+      <Link
+        href={"/"}
+        className="flex items-center gap-x-2 px-5 cursor-pointer text-zinc-500 hover:text-white transition w-fit text-sm"
+      >
+        <MoveLeft className="h-5 w-5 mr-3" />
+        Back to Dasboard
+      </Link>
       <div className="px-3 py-2 flex-1">
         <Link href={"/dashboard"} className="flex items-center pl-3 mb-14">
           <div className="h-8 w-8 mr-4 relative">
