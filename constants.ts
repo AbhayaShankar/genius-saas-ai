@@ -91,3 +91,46 @@ export const tools = [
         bgColor: "bg-green-700/10",
     },
 ];
+
+export const homeAITools = [
+    {
+        index: 0,
+        title: "Image Generation",
+        desc: "Create stunning images in various resolutions for free. Effortlessly adjust image sizes to suit your needs, from high-definition to web-friendly, all at your fingertips. Say hello to versatile, cost-effective image generation!",
+        src: "/homeImg.avif",
+        href: "/dashboard"
+
+    },
+    {
+        index: 1,
+        title: "Chat with AI",
+        desc: "Create stunning images in various resolutions for free. Effortlessly adjust image sizes to suit your needs, from high-definition to web-friendly, all at your fingertips. Say hello to versatile, cost-effective image generation!",
+        src: "/homeImg.avif",
+        href: "/dashboard"
+
+    },
+    {
+        index: 2,
+        title: "Code Generation",
+        desc: "Create stunning images in various resolutions for free. Effortlessly adjust image sizes to suit your needs, from high-definition to web-friendly, all at your fingertips. Say hello to versatile, cost-effective image generation!",
+        src: "/homeImg.avif",
+        href: "/dashboard"
+
+    },
+    {
+        index: 3,
+        title: "Music Generation",
+        desc: "Create stunning images in various resolutions for free. Effortlessly adjust image sizes to suit your needs, from high-definition to web-friendly, all at your fingertips. Say hello to versatile, cost-effective image generation!",
+        src: "/homeImg.avif",
+        href: "/dashboard"
+
+    },
+    {
+        index: 4,
+        title: "Video Generation",
+        desc: "Create stunning images in various resolutions for free. Effortlessly adjust image sizes to suit your needs, from high-definition to web-friendly, all at your fingertips. Say hello to versatile, cost-effective image generation!",
+        src: "/homeVideo.png",
+        href: "/dashboard"
+
+    },
+]
