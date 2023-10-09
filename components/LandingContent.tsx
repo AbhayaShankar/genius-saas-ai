@@ -62,7 +62,7 @@ const LandingContent = () => {
             >
               <div
                 className={cn(
-                  "text-white p-4 flex flex-col  justify-between h-full",
+                  "text-white p-4 flex flex-col mt-0 md:mt-5 justify-between h-full",
                   font.className
                 )}
               >
@@ -71,8 +71,8 @@ const LandingContent = () => {
                     {tool.title}
                   </h1>
                   <p
-                    className={`max-w-[400px] text-zinc-400 text-sm tracking-wide ${
-                      tool.index % 2 === 0 ? "text-right" : "text-left"
+                    className={`max-w-[400px] text-zinc-400 text-sm tracking-wide text-left px-5 md:px-0 ${
+                      tool.index % 2 === 0 ? "md:text-right" : "md:text-left"
                     }`}
                   >
                     {tool.desc}
@@ -107,7 +107,7 @@ const LandingContent = () => {
           {testimonials.map((testimonial) => (
             <Card
               key={testimonial.name}
-              className="bg-[#192339] border-none text-white"
+              className="bg-[#192339] border-[#fcfcfc] border-opacity-[0.075] text-white"
             >
               <CardHeader>
                 <CardTitle className="flex items-center gap-x-[10px]">

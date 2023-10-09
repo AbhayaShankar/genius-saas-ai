@@ -104,31 +104,31 @@ export const homeAITools = [
     {
         index: 1,
         title: "Chat with AI",
-        desc: "Create stunning images in various resolutions for free. Effortlessly adjust image sizes to suit your needs, from high-definition to web-friendly, all at your fingertips. Say hello to versatile, cost-effective image generation!",
-        src: "/homeImg.avif",
+        desc: "CFrom quick answers to everyday questions to clearing up confusion, our chatbot is your go-to resource. Harness the power of AI for effortless problem-solving and enjoy a smoother, more informed daily routine with Genius!",
+        src: "/homeChatbot.png",
         href: "/dashboard"
 
     },
     {
         index: 2,
         title: "Code Generation",
-        desc: "Create stunning images in various resolutions for free. Effortlessly adjust image sizes to suit your needs, from high-definition to web-friendly, all at your fingertips. Say hello to versatile, cost-effective image generation!",
-        src: "/homeImg.avif",
+        desc: "Simplify your coding tasks. Effortlessly streamline your development process and enhance your understanding of the code. Stuck somewhere, leverage the power of AI!",
+        src: "/homeCodes.jpg",
         href: "/dashboard"
 
     },
     {
         index: 3,
         title: "Music Generation",
-        desc: "Create stunning images in various resolutions for free. Effortlessly adjust image sizes to suit your needs, from high-definition to web-friendly, all at your fingertips. Say hello to versatile, cost-effective image generation!",
-        src: "/homeImg.avif",
+        desc: "Generate music in different genres and styles. Create original tracks, from  soothing melodies to energetic beats, all for free. Unlock the Beethovan inside of you!",
+        src: "/homeMusic.png",
         href: "/dashboard"
 
     },
     {
         index: 4,
         title: "Video Generation",
-        desc: "Create stunning images in various resolutions for free. Effortlessly adjust image sizes to suit your needs, from high-definition to web-friendly, all at your fingertips. Say hello to versatile, cost-effective image generation!",
+        desc: "Transform your ideas into captivating videos with ease. Just provide a simple prompt and description, and watch as our app generates stunning videos that bring your vision to life. Say goodbye to complex editing – create effortlessly with Genius!",
         src: "/homeVideo.png",
         href: "/dashboard"
 
