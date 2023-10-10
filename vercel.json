@@ -1,9 +1,7 @@
 {
-    "build": {
-      "functions": {
-        "pages/api/**/*.ts": {
-          "maxDuration": 120
-        }
+    "functions": {
+      "api/test.js": {
+        "maxDuration": 60
       }
     }
-}
+  }
