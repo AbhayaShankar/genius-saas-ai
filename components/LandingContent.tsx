@@ -48,7 +48,7 @@ const LandingContent = () => {
     <>
       <div className="mb-[60px]">
         <h1 className="text-center text-4xl text-white font-extrabold mb-10">
-          Top Notch Features
+          Premium Features
         </h1>
         <div className={""}>
           {homeAITools.map((tool) => (
