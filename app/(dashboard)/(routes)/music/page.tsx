@@ -45,7 +45,7 @@ const MusicPage = () => {
       //TODO: Catch 504 Gateway Timeout Error.
       if (error?.response?.status === 504) {
         toast(
-          "Gateway Timeout Error, Deployed on Vercel Hobby Plan! (10s timeout allowed)",
+          "Gateway Timeout Error, Deployed on Vercel Hobby Plan! (10s timeout allowed), Refresh, check your network connection and try again...",
           {
             icon: "❌",
             style: {
@@ -63,6 +63,7 @@ const MusicPage = () => {
         toast("Something Went Wrong!", {
           icon: "❌",
           style: {
+            textAlign: "center",
             borderRadius: "8px",
             background: "#333",
             color: "#fff",
