@@ -42,8 +42,22 @@ const VideoPage = () => {
 
       form.reset();
     } catch (error: any) {
+      //TODO: Catch 504 Gateway Timeout Error.
+      if (error?.response?.status === 504) {
+        toast(
+          "Gateway Timeout Error, Deployed on Vercel Hobby Plan! (10s timeout allowed)",
+          {
+            icon: "❌",
+            style: {
+              borderRadius: "8px",
+              background: "#333",
+              color: "#fff",
+            },
+          }
+        );
+      }
       // TODO: Open pro model
-      if (error?.repsonse?.status === 403) {
+      else if (error?.response?.status === 403) {
         proModal.onOpen();
       } else {
         toast("Something Went Wrong!", {
@@ -55,7 +69,6 @@ const VideoPage = () => {
           },
         });
       }
-      // TODO: Open pro model
       console.log(error);
     } finally {
       //TODO: Why refresh will come back to this
