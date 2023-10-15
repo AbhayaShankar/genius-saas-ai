@@ -47,7 +47,7 @@ const LandingContent = () => {
   return (
     <>
       <div className="mb-[60px]">
-        <h1 className="text-center text-4xl text-white font-extrabold mb-10">
+        <h1 className="text-center text-5xl text-white font-extrabold mb-10">
           Premium Features
         </h1>
         <div className={""}>
