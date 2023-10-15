@@ -5,15 +5,7 @@ import { cn } from "@/lib/utils";
 import { MoveRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-import {
-  Code,
-  ImageIcon,
-  LayoutDashboard,
-  MessageSquare,
-  Music,
-  Settings,
-  VideoIcon,
-} from "lucide-react";
+import { Code, ImageIcon, MessageSquare, Music, VideoIcon } from "lucide-react";
 
 const tools = [
   {

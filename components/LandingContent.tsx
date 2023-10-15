@@ -9,32 +9,32 @@ import Link from "next/link";
 
 const testimonials = [
   {
-    name: "Abhaya Shankar",
-    Avatar: "A",
-    title: "Software Engineer",
-    description:
-      "This is the best AI Tool I have used that is also free of cost. Really amazing!",
-  },
-  {
     name: "Harsh Pandey",
     Avatar: "H",
     title: "Full Stack Web3 Developer",
     description:
-      "This is the best AI Tool I have used that is also free of cost. Really amazing!",
-  },
-  {
-    name: "Prashik Mayur",
-    Avatar: "P",
-    title: "ML/AI Developer",
-    description:
-      "This is the best AI Tool I have used that is also free of cost. Really amazing!",
+      "Image and Music Generations were great! Loved this Application 💖.",
   },
   {
     name: "Akshay Kumar",
     Avatar: "A",
     title: "Full Stack Developer",
     description:
-      "This is the best AI Tool I have used that is also free of cost. Really amazing!",
+      "Very Great Application. One of a kind. beautiful UI and exceptional response!",
+  },
+  {
+    name: "Vivek Roy",
+    Avatar: "V",
+    title: "Software Engineer",
+    description:
+      "This is the best AI Tool I have used that is also free of cost. Really amazing! 🔥",
+  },
+  {
+    name: "Prashik Mayur",
+    Avatar: "P",
+    title: "ML/AI Developer",
+    description:
+      "Really great experience using this app! Almost covered all the dailyy use cases for AI.",
   },
 ];
 
